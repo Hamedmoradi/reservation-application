@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: azki-reservation-service
+  profiles:
+    active: "dev"
+

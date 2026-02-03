@@ -1,0 +1,3 @@
+INSERT INTO users (username, email, password) VALUES ('user1', 'johndoe@example.com', '$2a$10$cCobCn5hIojS1hOzOciSR.1QdXtAxV/HiMFhCO.1MuB19Rrxpm6N.'); -- password_123
+INSERT INTO users (username, email, password) VALUES ('user2', 'janedoe@example.com', '$2a$10$pNft3vfVzrTI3A4AQe8YxuSd0JkEy4KUo5wvMkDUrTrfvgY.lEfam'); -- password_456
+INSERT INTO users (username, email, password) VALUES ('user3', 'user123@example.com', '$2a$10$QcIhZNJ6iKtTNoQu6IY61O45zvt6Z2opHUODJYexe5dH52gjwbEue'); -- password_789

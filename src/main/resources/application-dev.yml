@@ -1,0 +1,52 @@
+server:
+  port: 8080
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+  datasource:
+    url: jdbc:mysql://localhost:3306/azki_reservation
+    username: admin
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    url: jdbc:mysql://localhost:3306/azki_reservation
+    user: admin
+    password: password
+    schemas: azki_reservation
+    locations: classpath:db/migration
+  sql:
+    init:
+      mode: never
+
+  jackson:
+    serialization:
+      indent-output: true
+
+jwt:
+  secret: RPYlWEm3uTTZmPLfZHFh/K7E04xrBqm+yk/R/H8PjuedyOISxQsP61VcZgSxYJkiB1J15G6iEsInd85QhF0S+Q==
+  access-token-expiration: 86400000 # 15 minutes
+  refresh-token-expiration: 86400000 # 24 hours
+  header: Authorization
+  prefix: "Bearer "
+
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    tagsSorter: alpha
+    path: /swagger-ui
+    disable-swagger-default-url: true
+    enabled: true
+  show-actuator: false
+
+redisson:
+  address: "redis://localhost:6379"
+#  password: "admin"

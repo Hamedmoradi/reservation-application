@@ -1,0 +1,1 @@
+create index idx_reserved on available_slots (is_reserved);
